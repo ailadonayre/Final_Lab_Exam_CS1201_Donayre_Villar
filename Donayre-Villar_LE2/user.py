@@ -23,10 +23,12 @@ class User:
         user_account[username] = {'password': password, 'points': points}
         
     def login(self):
-        username = input('Enter Username: ')
-        password = input('Enter password')
+        while True:
+            try:
+                username = input('Enter Username: ')
+                password = input('Enter password')
 
-        if username in user_account and password == user_account[username]["password"]:
-            print('Log in succefully')
-            self.play_game()
+                if username in user_account and password == user_account[username]["password"]:
+                    print('Log in succefully')
+                    self.play_game()
 
