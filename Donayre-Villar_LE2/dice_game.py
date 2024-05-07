@@ -18,7 +18,9 @@ class DiceGame:
         print("3. Log Out")
 
         CPU_points = 0
-        self.points = 0
+        user_points = 0
+        CPU_choice = 0
+        user_choice = 0
 
         while True:
             if choice == 1:
@@ -38,6 +40,13 @@ class DiceGame:
                 elif CPU_choice == user_choice:
                     print("It's a tie!")
                     continue
+                else:
+                    choice.lower() == 'n'
+                    if user_points > CPU_points:
+                        print(f'You won with your points: {user_points} and CPU points: {CPU_points}')
+                        self.points += 1
+                    else:
+                        print(f'You lost with your points: {user_points} and CPU points: {CPU_points}')
 
             if choice == 2:
                 pass
