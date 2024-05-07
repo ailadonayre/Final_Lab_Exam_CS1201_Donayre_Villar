@@ -1,3 +1,5 @@
+import os
+
 class UserManager:
     def load_users():
         pass

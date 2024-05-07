@@ -31,4 +31,6 @@ class User:
                 if username in user_account and password == user_account[username]["password"]:
                     print('Log in succefully')
                     self.play_game()
+            except ValueError:
+                print("[ValueError]. Invalid input. Please try again.")
 

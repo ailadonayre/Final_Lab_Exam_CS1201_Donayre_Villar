@@ -10,7 +10,9 @@ class DiceGame:
         pass
     
     def save_scores():
-        pass
+        score_folder = os.path.join(score_folder, "w")
+        with open("score_folder", "w"):
+            if not os.path.exists
 
     def play_game(self):
         print("1. Start Game")
@@ -28,7 +30,6 @@ class DiceGame:
 
                 if choice.lower() == 'y':
                     user_choice = random.randint(1, 6)
-
                     CPU_choice == random.randint(1, 6)
 
                 if CPU_choice < user_choice:
@@ -45,6 +46,7 @@ class DiceGame:
                     if user_points > CPU_points:
                         print(f'You won with your points: {user_points} and CPU points: {CPU_points}')
                         self.points += 1
+                        self.score += 1
                     else:
                         print(f'You lost with your points: {user_points} and CPU points: {CPU_points}')
 
@@ -55,14 +57,6 @@ class DiceGame:
             else:
                 print("Invalid input. Please try again.")
                 continue
-    def play(self):
-        user_points = 0
-        cpu_points = 0
-
-        user_choice = random.randint(1, 6)
-        cpu_choice = random.randint(1, 6)
-
-
 
     def show_top_scores():
         pass
@@ -82,7 +76,7 @@ class DiceGame:
             if choice == 1:
                 self.register()
             if choice == 2:
-                pass
+                self.login()
             if choice == 3:
                 exit()
             else:
