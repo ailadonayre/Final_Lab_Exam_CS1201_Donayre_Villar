@@ -24,16 +24,16 @@ class DiceGame:
 
         while True:
             if choice == 1:
-                choice = int(input("Enter 'y' to play: "))
+                choice = int(input("Enter 'y' to play and 'n' to Exit: "))
 
-                if user_choice.lower() == 'y':
+                if choice.lower() == 'y':
                     user_choice = random.randint(1, 6)
 
                     CPU_choice == random.randint(1, 6)
 
                 if CPU_choice < user_choice:
                     print("You win!")
-                    self.points += 1
+                    user_points += 1
                 elif CPU_choice > user_choice:
                     print("You lose!")
                     CPU_points += 1
