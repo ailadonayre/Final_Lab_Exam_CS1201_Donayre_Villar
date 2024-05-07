@@ -12,7 +12,8 @@ class DiceGame:
     def save_scores():
         score_folder = os.path.join(score_folder, "w")
         with open("score_folder", "w"):
-            if not os.path.exists
+            if not os.path.exists:
+                pass
 
     def play_game(self):
         print("1. Start Game")
@@ -82,3 +83,6 @@ class DiceGame:
             else:
                 print("Invalid input. Please try again.")
                 continue
+
+game = DiceGame()
+game.menu()
